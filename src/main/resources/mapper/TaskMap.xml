@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+
+<mapper namespace="com.example.task.taskexample.repository.TaskRepository">
+    <select id="findAll" resultType="com.example.task.taskexample.model.Task">
+        SELECT * FROM tasks;
+    </select>
+
+    <insert id="insert">
+        INSERT INTO tasks (nombre, descripcion, fechainicio)
+        VALUES (#{nombre}, #{descripcion}, #{fechainicio});
+    </insert>    
+</mapper>
+
